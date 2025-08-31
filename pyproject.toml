@@ -16,3 +16,6 @@ dependencies = [
 
 [project.scripts]
 api = "trustmonitor:flask_service"
+
+[tool.setuptools.packages.find]
+include = ["trustmonitor*"]
