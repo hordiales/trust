@@ -4,45 +4,37 @@ Our goal is to develop a prototype that uses AI to identify specific quality ind
 
 ## Index {#index}
 
--   [trust-monitor](#trust-monitor)
-    -   [Index](#index)
-    -   [Installation](#installation)
-    -   [Usage](#usage)
-    -   [Project Structure](#project-structure)
-    -   [Output Response](#output-response)
+- [trust-monitor {#trust-monitor}](#trust-monitor-trust-monitor)
+  - [Index {#index}](#index-index)
+  - [Installation {#installation}](#installation-installation)
+    - [Using UV {#using-uv}](#using-uv-using-uv)
+    - [Using pip](#using-pip)
+  - [Usage {#usage}](#usage-usage)
+  - [Project Structure {#project-structure}](#project-structure-project-structure)
+  - [Output Response {#output-response}](#output-response-output-response)
 
 ## Installation {#installation}
 
-1.  Clone the Repository
-2.  Navigate to the Project Directory
-3.  Create a Virtual Environment (Optional but Recommended):
+### Using UV {#using-uv}
 
-``` bash
-python -m venv venv
+Create virtual environment, install the package as a library, and download the required Spanish language model for spaCy:
+
+```bash
+uv sync
+
+uv pip install -e .
+
+uv run spacy download es_core_news_sm
 ```
 
-Create a virtual environment named venv. To activate the virtual environment: \* On Windows:
+### Using pip
 
-``` bash
-.\venv\Scripts\activate
-```
+Install the package and download the required Spanish language model for spaCy:
 
--   On macOS and Linux:
+```bash
+!pip install .
 
-``` bash
-source venv/bin/activate
-```
-
-4.  Install Project and Dependencies (inside the project directory):
-
-``` bash
-pip install -e .
-```
-
-5.  Download SpaCy Language Model (for Spanish): If you plan to use the project with Spanish language processing, you need to download the SpaCy language model. Run the following command:
-
-``` bash
-python -m spacy download es_core_news_sm
+!python -m spacy download es_core_news_sm
 ```
 
 ## Usage {#usage}
