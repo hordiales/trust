@@ -1,0 +1,21 @@
+[project]
+name = "trust"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "flask>=3.1.2",
+    "pandas>=2.3.2",
+    "pip>=25.2",
+    "pysentimiento>=0.7.3",
+    "pyyaml>=6.0.2",
+    "spacy>=3.8.7",
+    "stanza>=1.10.1",
+]
+
+[project.scripts]
+api = "trustmonitor:flask_service"
+
+[tool.setuptools.packages.find]
+include = ["trustmonitor*"]
